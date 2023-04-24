@@ -10,9 +10,9 @@ int g_size(const char *format, int *i)
 int c_i = *i + 1;
 int size = 0;
 if (format[c_i] == 'l')
-size = LONG;
+size = LONG_STR;
 else if (format[c_i] == 'h')
-size = SHORT;
+size = SHORT_STR;
 if (size == 0)
 *i = c_i - 1;
 else

@@ -51,7 +51,7 @@ while (number > 0)
 buffer[i--] = (number % 8) + '0';
 number /= 8;
 }
-if (flags & F_HASH && temp != 0)
+if (flags & HASH && temp != 0)
 buffer[i--] = '0';
 i++;
 return (write_unsgnd(0, i, buffer, flags, width, precision, size));
@@ -116,7 +116,7 @@ while (number > 0)
 buffer[i--] = map_to[number % 16];
 number /= 16;
 }
-if (flags & F_HASH && temp != 0)
+if (flags & HASH && temp != 0)
 {
 buffer[i--] = flag_ch;
 buffer[i--] = '0';
