@@ -16,6 +16,6 @@ size = SHORT_STR;
 if (size != 0)
 *i = c_i;
 else
-*i = c_i - 1
+*i = c_i - 1;
 return (size);
 }
