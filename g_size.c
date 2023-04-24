@@ -13,9 +13,9 @@ if (format[c_i] == 'l')
 size = LONG_STR;
 else if (format[c_i] == 'h')
 size = SHORT_STR;
-if (size == 0)
-*i = c_i - 1;
-else
+if (size != 0)
 *i = c_i;
+else
+*i = c_i - 1
 return (size);
 }
