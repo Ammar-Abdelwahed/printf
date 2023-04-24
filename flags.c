@@ -32,4 +32,3 @@ int flags(const char *format, int *i)
 
 	return (flag);
 }
-i

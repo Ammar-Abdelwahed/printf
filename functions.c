@@ -52,7 +52,7 @@ int print_string(va_list types, __attribute__((unused)) char buffer[],
 
 	if (width > length)
 	{
-		if (flags & F_MINUS)
+		if (flags & MINUS)
 		{
 			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
@@ -81,7 +81,8 @@ int print_string(va_list types, __attribute__((unused)) char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int print_percent(va_list types, __attribute__((unused)) char buffer[],
+int print_percent(__attribute__((unused)) va_list types,
+	__attribute__((unused)) char buffer[],
 	__attribute__((unused)) int flags, __attribute__((unused)) int width,
 	__attribute__((unused)) int precision, __attribute__((unused)) int size)
 {
@@ -147,7 +148,7 @@ int print_binary(va_list types, __attribute__((unused)) char buffer[],
 	__attribute__((unused)) int flags, __attribute__((unused)) int width,
 	__attribute__((unused)) int precision, __attribute__((unused)) int size)
 {
-	unsigned int n, m, i, sum;
+	unsigned int x, y, i, sum;
 	unsigned int a[32];
 	int count;
 
