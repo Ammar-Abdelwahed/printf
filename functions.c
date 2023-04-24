@@ -158,7 +158,7 @@ int print_binary(va_list types, __attribute__((unused)) char buffer[],
 	for (i = 1; i < 32; i++)
 	{
 		y /= 2;
-		a[i] = (n / m) % 2;
+		a[i] = (x / y) % 2;
 	}
 	for (i = 0, sum = 0, count = 0; i < 32; i++)
 	{
