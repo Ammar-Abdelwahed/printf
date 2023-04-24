@@ -45,8 +45,7 @@ unsigned long int temp = number;
 number = convert_size_unsgnd(number, size);
 if (number == 0)
 buffer[i--] = '0';
-buffer[1024
- - 1] = '\0';
+buffer[1024 - 1] = '\0';
 while (number > 0)
 {
 buffer[i--] = (number % 8) + '0';
@@ -99,15 +98,15 @@ flags, 'X', width, precision, size));
 *@width: get width
 *@precision: precision specification
 *@size: size specifier
-*@size: size specification
 *Return: number of chars printed
 */
 int print_hexa(va_list types, char map_to[], char buffer[],
-int flags, char flag_ch, int __attribute__((__unused__)) width, int precision, int size)
+int flags, char flag_ch, int __attribute__((__unused__)) width,
+	       int precision, int size)
 {
 int i = 1024 - 2;
 unsigned long int number = va_arg(types, unsigned long int);
-unsigned long int temp= number;
+unsigned long int temp = number;
 number = convert_size_unsgnd(number, size);
 if (number == 0)
 buffer[i--] = '0';
