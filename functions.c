@@ -31,7 +31,8 @@ int print_char(va_list types, char buffer[],
  * Return: Number of chars printed
  */
 int print_string(va_list types, __attribute__((unused)) char buffer[],
-	__attribute__((unused)) int flags, __attribute__((unused)) int width, __attribute__((unused)) int precision, __attribute__((unused)) int size)
+	__attribute__((unused)) int flags, __attribute__((unused)) int width,
+	__attribute__((unused)) int precision, __attribute__((unused)) int size)
 {
 	int length = 0, i;
 	char *str = va_arg(types, char *);
@@ -81,7 +82,8 @@ int print_string(va_list types, __attribute__((unused)) char buffer[],
  * Return: Number of chars printed
  */
 int print_percent(va_list types, __attribute__((unused)) char buffer[],
-	__attribute__((unused)) int flags, __attribute__((unused)) int width, __attribute__((unused)) int precision, __attribute__((unused)) int size)
+	__attribute__((unused)) int flags, __attribute__((unused)) int width,
+	__attribute__((unused)) int precision, __attribute__((unused)) int size)
 {
 	return (write(1, "%%", 1));
 }
@@ -142,7 +144,8 @@ int print_int(va_list types, char buffer[],
  * Return: Numbers of char printed.
  */
 int print_binary(va_list types, __attribute__((unused)) char buffer[],
-	__attribute__((unused)) int flags, __attribute__((unused)) int width, __attribute__((unused)) int precision, __attribute__((unused)) int size)
+	__attribute__((unused)) int flags, __attribute__((unused)) int width,
+	__attribute__((unused)) int precision, __attribute__((unused)) int size)
 {
 	unsigned int n, m, i, sum;
 	unsigned int a[32];
